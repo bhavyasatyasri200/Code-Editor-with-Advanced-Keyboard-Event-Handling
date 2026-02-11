@@ -1,0 +1,68 @@
+.editor-container {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e;
+  }
+  
+  .editor-header {
+    padding: 1rem;
+    border-bottom: 1px solid #3c3c3c;
+    background-color: #2d2d30;
+  }
+  
+  .editor-header h3 {
+    margin: 0;
+    color: #cccccc;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .editor-input {
+    flex: 1;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    border: none;
+    outline: none;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 1rem;
+    resize: none;
+    tab-size: 2;
+    white-space: pre;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .editor-input::placeholder {
+    color: #6a6a6a;
+  }
+  
+  .editor-input:focus {
+    background-color: #1e1e1e;
+  }
+  
+  .editor-input::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .editor-input::-webkit-scrollbar-track {
+    background: #1e1e1e;
+  }
+  
+  .editor-input::-webkit-scrollbar-thumb {
+    background: #424242;
+    border-radius: 6px;
+  }
+  
+  .editor-input::-webkit-scrollbar-thumb:hover {
+    background: #4f4f4f;
+  }
+  
+  .editor-input::-webkit-scrollbar-corner {
+    background: #1e1e1e;
+  }
+  

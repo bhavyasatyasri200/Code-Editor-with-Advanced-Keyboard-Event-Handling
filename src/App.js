@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React, { useRef } from 'react';
+import Layout from './components/Layout/Layout';
+import Editor from './components/Editor/Editor';
+import EventDashboard from './components/EventDashboard/EventDashboard';
 import './App.css';
 
 function App() {
+  const eventDashboardRef = useRef(null);
+  
+  const handleEvent = (eventDetails) => {
+    if (eventDashboardRef.current) {
+      if (eventDetails.type === 'action') {
+        eventDashboardRef.current.addAction(eventDetails.displayText.replace('Action: ', ''));
+      } else {
+        eventDashboardRef.current.addEvent(eventDetails);
+      }
+    }
+  };
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <Editor onEvent={handleEvent} />
+        <EventDashboard ref={eventDashboardRef} />
+      </Layout>
     </div>
   );
 }
