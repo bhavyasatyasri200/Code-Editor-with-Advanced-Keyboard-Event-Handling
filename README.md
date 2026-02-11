@@ -19,7 +19,7 @@ A browser-based code editor with VS Code-style keyboard shortcuts, built with Re
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/bhavyasatyasri200/Code-Editor-with-Advanced-Keyboard-Event-Handling.git
  cd Code-Editor-with-Advanced-Keyboard-Event-Handling
 
 # Build and run with Docker Compose
